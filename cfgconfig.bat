@@ -1,4 +1,5 @@
 ::Cfg api by alejandroalzatesanchez
+::This file is unvalored will no work with new's 'server.bat' from this reason is incomplete.
 if exist "cfgconfig" (
 	cd cfgconfig
 	) else (
