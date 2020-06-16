@@ -5,7 +5,7 @@ To unexperimented people make your own minecraft server.
 if you are using linux remember enable the executable bit of all .jar files on:
 Options/Right Click > Propieties > Permissions > allow execute the file
 3. Intall java if doesn't have it and run the downloaded file wait while appears the window
-Windows representation (to see this correctly make -50% zoom out):
+Windows representation (to see this correctly make -50% zoom out or download):
   .________________________________________________________.
  /                 Mod system installer                   X \
  |----------------------------------------------------------|
