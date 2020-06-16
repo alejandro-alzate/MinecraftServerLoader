@@ -1,9 +1,11 @@
 ::Minecraft Server Starter by: alejandroalzatesanchez
 ::Redistribute, edit, copy, but don't buy/sell and give me the credits
 :SOF
+::^StartOfFile (Active Segment)
 setlocal
 title Minecraft Server Loader by alejandroalzatesanchez
 :Preconfig
+::^Quick setup
 ::Edit the settings too carefully you only need edit the text before =, example (set var=edit here)
 set echo=off
 ::^Generally uselless but, set to on to make verbose mode enabled, if only need the minecraft's stdout set to off
@@ -13,6 +15,8 @@ set color=f0
 ::^Establish the command line color (f=white 0=black > white on black)
 set dir=~dp
 ::^Establish the directory where minecraft works, if the batch is in the same directory set to ~dp (~=invocation d=drive p=path 0=the batch file)
+set args=nogui
+::^Clear it if gave an erros (default argument nogui=No window interface, when you use only a terminal can make commands in the world like a "SUDO" (SuperUserDOes) without make an /op player)
 set minram=512M
 set maxram=1G
 ::^The amount of ram to minecraft; the minimun is the amount to start the server, if needs more it's expand the amount if gave the maximum is the peak to use from here DON'T expand more, be carefully max use 80% of your
@@ -35,14 +39,16 @@ cd /d %dir%
 color %color%
 title %java% -Xms%minram% -Xmx%maxram% -jar %server%
 timeout /t 1s > nul
-title Loaded. Ram %minram%/%maxram%, Verbose %echo%, Server %server%
+title Ram %minram%/%maxram%, Verbose %echo%, Server %server% %nogui%
 %java% -Xms%minram% -Xmx%maxram% -jar %server%
 if not errorlevel 0 (
-	echo "A fatal error ocurred (Error: %errorlevel%)"
+	echo "A fatal error ocurred (Error: %errorlevel%) See the error log up there"
+	title Ended, but with Errors (Something hapened)
 	goto ask
 	)
 :ask
 set ask=y
 :EOF
+::^EndOfFile (Active segment)
 endlocal
 exit /b
