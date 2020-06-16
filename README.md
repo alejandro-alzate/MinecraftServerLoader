@@ -1,10 +1,11 @@
 To do manual by alejandroalzate: Create your own minecraft server.
+To unexperimented people make your own minecraft server.
 1. First create an folder to store your server BUT don't fill it with NOTHING!. Can be this example '~\server\'
 2. Download the version for your own preference from file.minecraftforge.net find the 'installer flavour' (If not download the lastest-stable I recommend when create the modtd for the server specify the version the 90% of people have the lastest-stable version)
 if you are using linux remember enable the executable bit of all .jar files on:
 Options/Right Click > Propieties > Permissions > allow execute the file
 3. Intall java if doesn't have it and run the downloaded file wait while appears the window
-Windows representation:
+Windows representation (to see this correctly make -50% zoom out):
   .________________________________________________________.
  /                 Mod system installer                   X \
  |----------------------------------------------------------|
